@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { orderCards, filterCards } from '../../redux/actions';
+import { orderCards, filterCards, allCards } from '../../redux/actions';
+import styles from "./Favorites.module.css"
 
 export function Favorites(props) {
 
@@ -15,9 +16,13 @@ export function Favorites(props) {
         dispatch(filterCards(event.target.value))
     }
 
+    const handlerAll = () => {
+        dispatch(allCards())
+    }
+
   return (
     <div>
-        <h2>My Favorites</h2>
+        <h2 className={styles.favorites__title} >My Favorites</h2>
         <div>
             <select onChange={handlerOrder}>
                 <option value="order" disabled="disabled">Order By</option>
@@ -31,6 +36,7 @@ export function Favorites(props) {
                 <option value="Unknown">Unknown</option>
                 <option value="Genderless">Genderless</option>
             </select>
+            <button onSubmit={handlerAll}> ALL </button>
         </div>
         {   
             //TODO: Agregar el link to Details (copiar de CARD)

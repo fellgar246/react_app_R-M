@@ -1,0 +1,30 @@
+.nav__container{
+    display: grid; 
+    grid-template-columns: 1.2fr 0.6fr; 
+    grid-template-rows: 1fr; 
+    justify-items: center;
+}
+
+.button__container{
+    width: 480px;
+    margin-left: -60px;
+}
+
+.button{
+    width: 120px;
+    height: 50px;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 38px;
+    background: #1D1D1D;
+    border-radius: 28px;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.searchbar{
+    margin-left: 20px;
+}

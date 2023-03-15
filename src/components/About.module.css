@@ -1,0 +1,30 @@
+
+.about__title{
+    color: #F4F4F4;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.about__container{
+    display: grid; 
+    grid-template-columns: 0.8fr 1.2fr; 
+    grid-template-rows: 1fr; 
+    padding: 30px;
+    width: 700px;
+    margin: auto;
+}
+
+.about__img{
+    border-radius: 50%;
+    width: 200px;
+    height: 190px;
+    margin-left: 30px;
+}
+
+.about__text{
+    color: #F4F4F4;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1rem;
+}

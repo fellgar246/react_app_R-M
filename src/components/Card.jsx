@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addFavorites, deleteFavorites } from "../redux/actions";
+import styles from "./Card.module.css" 
 
 export function Card(props) { //* Tambien se puede destructurar props
    const [isFav, setIsFav] = useState(false);
@@ -25,7 +26,7 @@ export function Card(props) { //* Tambien se puede destructurar props
    }
 
    return (
-      <div>
+      <div className={ styles.card__container }>
          {
             isFav ? (
                <button onClick={handleFavorite}>❤️</button>

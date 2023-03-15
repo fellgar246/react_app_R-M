@@ -61,6 +61,7 @@ function App () {
     })
   }
 
+  //TODO: CREAR BOTON LOGOUT
   return (
     <div className='App' style={{ padding: '25px' }}>
       { location.pathname !== "/" && <Nav  onSearch={onSearch}/> }      

@@ -37,7 +37,7 @@ export default function Form(props) {
   }
 
   return (
-    <>
+    <div className={styles.container} >
 
     <h1 className={styles.title}>You’re Welcome</h1>
 
@@ -47,7 +47,7 @@ export default function Form(props) {
     >
         <label className={styles.form__text}>
             Username
-        </label>
+        </label>        
         <input 
             type="text" 
             name='username'
@@ -58,7 +58,8 @@ export default function Form(props) {
         <p className={styles.error}>
             {errors.username && errors.username}
         </p>
-        <label className={styles.form__text}>
+    
+        <label className={styles.form__text}> 
             Password
         </label>
         <input 
@@ -67,18 +68,19 @@ export default function Form(props) {
             value={userData.password}
             onChange={handleInputChange}
             className={styles.form__input}
-        />       
+        />  
+         <p className={styles.error}>
+            {errors.password && errors.password}
+        </p>
         <button 
             type='submit'
             className={styles.form__button}
         >
             <span className={styles.form__button__text}>LOGIN</span>
         </button>
-        <p className={styles.error}>
-            {errors.password && errors.password}
-        </p>
+       
     </form>
 
-    </>
+    </div>
   )
 }
