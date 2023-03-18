@@ -3,15 +3,14 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom"; 
 
-import Cards from './components/Cards.jsx';
-import Nav from './components/Nav';
-import About from './components/About';
-import Detail from './components/Detail';
+import Cards from './pages/Cards/Cards.jsx';
+import Nav from './components/Nav/Nav';
+import About from './pages/About/About';
+import Detail from './pages/Detail/Detail';
 import Form from './components/Form/Form';
-import Favorites from './components/Favorites/Favorites';
+import Favorites from './pages/Favorites/Favorites';
 
 
-//TODO: Agregar estilos a la aplicación
 function App () {
 
   const [ characters, setCharacters ] = useState([]);

@@ -1,0 +1,50 @@
+.card__container{
+    width: 255px;
+    height: 320px;
+    background-color: #1D1D1D;
+    border-radius: 60px;
+
+}
+
+.image{
+    width: 255px;
+    height: 250px;
+    border-radius: 60px 60px 0px 0px;
+    position: relative;
+    top: -20px;
+}
+
+.closeIcon{
+    color: #424242;
+    position: relative;
+    top: 75px;
+    left: 85px;
+    z-index: 2;
+}
+
+.heartIcon_on{
+    color: red;
+    top: 40px;
+    position: relative;
+    left: 110px;
+    z-index: 2;
+
+}   
+
+.heartIcon_off{
+    color: #424242;
+    top: 40px;
+    position: relative;
+    left: 110px;
+    z-index: 2;
+}
+
+.name{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #F4F4F4;
+    margin-top: -7px;
+}

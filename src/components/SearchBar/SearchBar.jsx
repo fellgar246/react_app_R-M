@@ -22,7 +22,7 @@ export default function SearchBar(props) {
             onClick={()=>props.onSearch(character)}
             className={styles.searchbar__button}
          >
-            Agregar
+            Add +
          </button> 
       </div>
    );

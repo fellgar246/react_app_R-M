@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { addFavorites, deleteFavorites } from "../redux/actions";
+import { addFavorites, deleteFavorites } from "../../redux/actions";
 import styles from "./Card.module.css" 
 
 export function Card(props) { //* Tambien se puede destructurar props
@@ -25,23 +25,23 @@ export function Card(props) { //* Tambien se puede destructurar props
       }
    }
 
+
+   //TODO aplicar efecto S7 expandable Effect y efecto s7 creative layered
    return (
       <div className={ styles.card__container }>
          {
             isFav ? (
-               <button onClick={handleFavorite}>❤️</button>
+               <button className={styles.heartIcon_on} onClick={handleFavorite}>❤️</button>
             ) : (
-               <button onClick={handleFavorite}>🤍</button>
+               <button className={styles.heartIcon_off} onClick={handleFavorite}>🤍</button>
             )
          }
-         <button onClick={props.onClose}>X</button>
+         <button className={styles.closeIcon} onClick={props.onClose}>X</button>
          <Link
             to={`/detail/${props.id}`}
          >
-            <h2>{props.name}</h2>
-            <h2>{props.species}</h2>
-            <h2>{props.genero}</h2>
-            <img  src={props.image} alt={`${props.id}-${props.name}`} />
+            <img  className={styles.image} src={props.image} alt={`${props.id}-${props.name}`} />
+            <h2 className={styles.name} >{props.name}</h2>
          </Link>
       </div>
    );

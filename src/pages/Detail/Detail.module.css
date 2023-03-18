@@ -1,0 +1,56 @@
+.container{
+    width: 710px;
+    height: 430px;
+    background-color: #1D1D1D;
+    border-radius: 50px;
+    display: grid;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.name{
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #F4F4F4;
+    margin: 0;
+    top: 15px;
+    position: relative;
+}
+
+.decorationLine{
+    width: 630px;
+    height: 5px;
+    background-color: #F4F4F4;
+    position: absolute;
+    left: 35px;
+    top: 70px;
+}
+
+.subContainer{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+}
+
+.image{
+    position: relative;
+    width: 290px;
+    height: 280px;
+    border-radius: 35px;
+    left: 30px;
+}
+
+.textContainer{
+    position: relative;
+}
+
+.text{
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #F4F4F4;
+    text-align: left;
+    margin-left: 20px;
+}
