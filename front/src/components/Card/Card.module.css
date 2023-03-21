@@ -15,28 +15,36 @@
 }
 
 .closeIcon{
-    color: #424242;
+    color: white;
     position: relative;
-    top: 75px;
-    left: 85px;
+    top: 80px;
+    left: 74px;
     z-index: 2;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 
 .heartIcon_on{
     color: red;
-    top: 40px;
+    top: 45px;
     position: relative;
-    left: 110px;
+    left: 100px;
     z-index: 2;
-
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }   
 
 .heartIcon_off{
-    color: #424242;
-    top: 40px;
+    color: white;
+    top: 45px;
     position: relative;
-    left: 110px;
+    left: 100px;
     z-index: 2;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 
 .name{

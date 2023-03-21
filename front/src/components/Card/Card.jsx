@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addFavorites, deleteFavorites } from "../../redux/actions";
 import styles from "./Card.module.css" 
+import { AiFillHeart, AiOutlineHeart, AiFillCloseCircle } from "react-icons/ai";
 
 export function Card(props) { //* Tambien se puede destructurar props
    const [isFav, setIsFav] = useState(false);
@@ -31,12 +32,12 @@ export function Card(props) { //* Tambien se puede destructurar props
       <div className={ styles.card__container }>
          {
             isFav ? (
-               <button className={styles.heartIcon_on} onClick={handleFavorite}>❤️</button>
+               <AiFillHeart className={styles.heartIcon_on} onClick={handleFavorite} />
             ) : (
-               <button className={styles.heartIcon_off} onClick={handleFavorite}>🤍</button>
+               <AiFillHeart className={styles.heartIcon_off} onClick={handleFavorite} />
             )
          }
-         <button className={styles.closeIcon} onClick={props.onClose}>X</button>
+         <AiFillCloseCircle className={styles.closeIcon} onClick={props.onClose} />
          <Link
             to={`/detail/${props.id}`}
          >

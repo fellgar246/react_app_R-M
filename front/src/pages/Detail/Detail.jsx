@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Loading from '../../components/Loading/Loading';
+import { GiReturnArrow } from "react-icons/gi";
 import styles from "./Detail.module.css"
 
 export default function Detail() {
@@ -31,6 +32,7 @@ export default function Detail() {
     //TODO: Centrar Loading
     //TODO: Resetear el State
     //TODO: agregar button en CSS
+    //TODO: boton regresar te regrese a la pagina anterior
   return (
     <>  
         { character.name ? (
@@ -57,9 +59,7 @@ export default function Detail() {
                 </div>
               
             </div> 
-            <button onClick={backToHome}>
-            Regresar
-            </button>  
+            <GiReturnArrow  className={ styles.GiReturnArrow } onClick={backToHome}/>
             </>
         ) : (
             <div>
