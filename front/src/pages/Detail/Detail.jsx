@@ -8,14 +8,12 @@ export default function Detail() {
     const { detailId } = useParams();
     const [character, setCharacter] = useState("");
 
-    const URL_BASE = "https://be-a-rym.up.railway.app/api"
-
     const navigate = useNavigate();
 
     const backToHome = () => navigate("/home");
     
     useEffect(() => {
-    fetch(`${URL_BASE}/character/${detailId}?key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
         .then((response) => response.json())
         .then((char) => {
         if (char.name) {
@@ -54,7 +52,7 @@ export default function Detail() {
                         <h3 className={styles.text}>
                             Gender: {character.gender}
                         </h3>
-                        { character.origin &&  <h3 className={styles.text}> Origin: {character.origin.name}</h3>}
+                        { character.origin &&  <h3 className={styles.text}> Origin: {character.origin}</h3>}
                     </div>        
                 </div>
               

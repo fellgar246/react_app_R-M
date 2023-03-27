@@ -21,7 +21,7 @@ function App () {
   const username = "12345@gmail.com";
   const password = "123456"
 
-  const URL_BASE = "https://be-a-rym.up.railway.app/api"
+  // const URL_BASE = "https://be-a-rym.up.railway.app/api"
 
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ function App () {
   }, [access]);
 
   function onSearch(id) {
-    fetch(`${URL_BASE}/character/${id}?key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`http://localhost:3001/rickandmorty/onsearch/${id}`)
        .then((response) => response.json())
        .then((data) => {
           if (data.name) {

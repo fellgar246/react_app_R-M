@@ -1,6 +1,7 @@
 const favs = require("../utils/favs");
 
 function postFav(req, res){
+    //TODO: crear nuevo post
     favs.push(req.body);
     res.status(201).json(favs);
 }

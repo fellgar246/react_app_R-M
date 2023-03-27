@@ -21,4 +21,5 @@ describe("Route: GET rickandmorty/onsearch/:id", () => {
         return agent.get("/rickandmorty/onsearch/10800").send()
                     .then(response => expect(response.statusCode).toBe(500))
     });
+    //TODO: Test para details
 })

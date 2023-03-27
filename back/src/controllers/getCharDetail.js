@@ -1,10 +1,10 @@
 const axios = require("axios");
-const URL = "https://rickandmortyapi.com/api/character/"
+const { KEY, URL } = process.env;
 
 async function getCharDetail(req, res){
     const { detailId } = req.params;
     try {
-        const response = await axios.get(URL + detailId);
+        const response = await axios.get(`${URL}/character/${detailId}?key=${KEY}`);
         const character = {
             id: response.data.id,
             name: response.data.name,
