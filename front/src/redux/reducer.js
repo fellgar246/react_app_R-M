@@ -1,4 +1,4 @@
-import { ADD_FAV, ALL, DELETE_FAV, FILTER, ORDER } from "./actions";
+import { ADD_FAV, DELETE_FAV, FILTER, ORDER, GET_FAV } from "./actions";
 
 const initialState = {
     myFavorites: [],
@@ -11,17 +11,20 @@ const rootReducer = (state= initialState, action) => {
         case ADD_FAV:
             return {
                 ...state,
-                myFavorites:[...state.allCharacters, action.payload], //TODO: cambiar myFavorites:payload
-                allCharacters: [...state.allCharacters, action.payload], //TODO: cambiar allCharacters:payload
+                myFavorites: action.payload, 
+                allCharacters: action.payload, 
                 errors: {}
             }
         case DELETE_FAV:
-            const filteredList = state.myFavorites.filter(
-                character => character.id !== action.payload
-            );
             return {
                 ...state,
-                myFavorites: filteredList, //TODO: cambiar myFavorites: payload
+                myFavorites: action.payload,
+                errors: {},
+            }
+        case GET_FAV:
+            return{
+                ...state,
+                myFavorites: action.payload,
                 errors: {},
             }
         case FILTER:
@@ -37,11 +40,6 @@ const rootReducer = (state= initialState, action) => {
                     action.payload === "Ascendente" 
                     ? state.allCharacters.sort((a, b) => a.id - b.id)
                     : state.allCharacters.sort((a, b) => b.id - a.id)
-            }
-        case ALL:
-            return {
-                ...state,
-                myFavorites: [...state.allCharacters]
             }
         case "ERROR": {
             return {

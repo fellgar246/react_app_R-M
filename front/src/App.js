@@ -18,8 +18,11 @@ function App () {
 
   const location = useLocation();
 
-  const username = "12345@gmail.com";
-  const password = "123456"
+  // const username = "12345@gmail.com";
+  // const password = "123456"
+
+  const username = "1";
+  const password = "1"
 
   // const URL_BASE = "https://be-a-rym.up.railway.app/api"
 

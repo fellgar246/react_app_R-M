@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { orderCards, filterCards, allCards } from '../../redux/actions';
+import { orderCards, filterCards } from '../../redux/actions';
 
 import styles from "./Favorites.module.css"
 
@@ -18,9 +18,6 @@ export function Favorites(props) {
         dispatch(filterCards(event.target.value))
     }
 
-    const handlerAll = () => {
-        dispatch(allCards())
-    }
     //TODO: Habilitar handlerAll
     //TODO: Agregar estilos filtros
     //TODO: texto de nombre reducir
