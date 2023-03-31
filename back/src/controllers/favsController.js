@@ -1,9 +1,19 @@
-const favs = require("../utils/favs");
+let favs = require("../utils/favs");
 
 function postFav(req, res){
-    //TODO: crear nuevo post
-    favs.push(req.body);
-    res.status(201).json(favs);
+    let character  = req.body;
+
+    try {
+        let characterFound = favs.find(char => char.id === character.id);
+        if(characterFound) throw new Error("Character already marked as favorite");
+        else{
+            favs.push(character);
+            res.status(201).json(favs);
+        }     
+    } catch (error) {
+        res.status(400).json({error: error.message});
+    }
+  
 }
 
 function getFavs(req, res){
@@ -12,7 +22,7 @@ function getFavs(req, res){
 
 function deleteFav(req, res){
     const {id} = req.params;
-    favs = favs.filter((character) => character.id !== Number(id));
+    favs = favs.filter((character) => Number(character.id) !== Number(id));
     res.status(200).json(favs); 
 }
 
