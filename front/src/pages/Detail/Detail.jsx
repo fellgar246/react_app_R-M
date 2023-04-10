@@ -54,14 +54,13 @@ export default function Detail() {
                         </h3>
                         { character.origin &&  <h3 className={styles.text}> Origin: {character.origin}</h3>}
                     </div>        
-                </div>
-              
+                </div>              
+                <GiReturnArrow  className={ styles.GiReturnArrow } onClick={backToHome}/>
             </div> 
-            <GiReturnArrow  className={ styles.GiReturnArrow } onClick={backToHome}/>
             </>
         ) : (
-            <div>
-                <Loading />
+            <div className={ styles.Loading }>
+                <Loading  />
             </div>
         )}
      
